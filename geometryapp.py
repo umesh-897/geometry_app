@@ -145,3 +145,120 @@ with colac:
 
 with colbc:
     st.metric('Area',round(circle_area(r),2))
+    
+#######################cone
+st.divider()
+st.divider()
+
+st.header('3D Objects')
+st.subheader('Cone')
+
+col1co,col2co=st.columns([1,3])
+
+with col1co:
+    r_cone=st.number_input('Radius: ',key='cone_r')
+    l_cone=st.number_input('Lateral side Length: ',key='cone_l')
+
+colaco,colbco=st.columns(2)
+
+with colaco:
+    st.metric('Total Surface Area',cone_tsa(r_cone,l_cone))
+
+with colbco:
+    st.metric('Volume',cone_vol(r_cone,l_cone))
+    
+    
+#######################cube
+st.divider()
+st.divider()
+
+
+st.subheader('Cube')
+
+col1cu,col2cu=st.columns([1,3])
+
+with col1cu:
+    s_cube=st.number_input('Radius: ',key='col_cu')
+    
+
+cubeacu,cubebcu=st.columns(2)
+
+with cubeacu:
+    st.metric('Total Surface Area',cube_tsa(s_cube))
+
+with cubebcu:
+    st.metric('Volume',cube_vol(s_cube))
+    
+    
+
+
+#######################cuboid
+st.divider()
+st.divider()
+
+
+st.subheader('Cuboid')
+
+col1boid,col2boid=st.columns([1,3])
+
+with col1boid:
+    l=st.number_input('Length: ',key='cuboid_l')
+    b=st.number_input('Breadth: ',key='cuboid_b')
+    h=st.number_input('Height : ',key='cuboid_c')
+
+cola_boid,colb_boid=st.columns(2)
+
+with cola_boid:
+    st.metric('Total_suraface_Area',cuboid_tsa(l,b,h))
+
+with colb_boid:
+    st.metric('Volume',cuboid_vol(l,b,h))
+    
+    
+
+###############Sphere
+st.divider()
+st.divider()
+
+
+st.subheader('Sphere')
+
+col1_sp,col2_sp=st.columns([1,3])
+
+with col1_sp:
+    r_sphere=st.number_input('Radius: ',key='sphere')
+   
+
+cola_sp,colb_sp=st.columns(2)
+
+with cola_sp:
+    st.metric('Total Surface Area',round(sphere_tsa(r_sphere)),2)
+
+with colb_sp:
+    st.metric('Volume',round(sphere_volume(r_sphere)),2)
+    
+    
+    
+##################Cylinder    
+
+st.divider()
+st.divider()
+
+
+st.subheader('Cylinder')
+
+col1co,col2co=st.columns([1,3])
+
+with col1co:
+    r_cyl=st.number_input('Radius: ',key='r_cyl')
+    h_cyl=st.number_input('Height: ',key='h_cyl')
+
+cola_cyl,colb_cyl=st.columns(2)
+
+with cola_cyl:
+    st.metric('Total Surface Area',cylinder_tsa(r_cyl,h_cyl))
+
+with colb_cyl:
+    st.metric('Volume',cylinder_vol(r_cyl,h_cyl))
+    
+    
